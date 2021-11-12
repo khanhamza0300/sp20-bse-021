@@ -22,6 +22,8 @@ import android.widget.Toast;
 public class LeftFragment extends Fragment {
     private Button button1;
     private Button button2;
+    private SharedViewModel sharedViewModel;
+
     public LeftFragment() {
         // Required empty public constructor
     }
@@ -40,6 +42,8 @@ public class LeftFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        sharedViewModel = new ViewModelProvider(getActivity()).get(SharedViewModel.class);
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_left, container, false);
     }
@@ -54,14 +58,14 @@ public class LeftFragment extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Message 1", Toast.LENGTH_SHORT).show();
+                sharedViewModel.setValue("Message from button 1");
             }
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Message 2", Toast.LENGTH_SHORT).show();
+                sharedViewModel.setValue("Message from button 2");
             }
         });
     }

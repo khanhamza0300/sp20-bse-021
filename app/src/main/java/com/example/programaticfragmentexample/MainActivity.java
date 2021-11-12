@@ -16,10 +16,15 @@ public class MainActivity extends AppCompatActivity{
     private LeftFragment leftFragment;
     private RightFragment rightFragment;
 
+    private SharedViewModel sharedViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sharedViewModel = new ViewModelProvider(this).get(SharedViewModel.class);
+        sharedViewModel.initialize();
+
         if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE) {
             fragMan = getSupportFragmentManager();
             fragTrans = fragMan.beginTransaction();

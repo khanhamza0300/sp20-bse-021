@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -19,6 +20,9 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class RightFragment extends Fragment {
+    private SharedViewModel sharedViewModel;
+    private TextView textView;
+
     public RightFragment() {
         // Required empty public constructor
     }
@@ -32,8 +36,20 @@ public class RightFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_right, container, false);
+        textView = view.findViewById(R.id.textView);
+
+        sharedViewModel = new ViewModelProvider(getActivity()).get(SharedViewModel.class);
+        MutableLiveData<String> mutableLiveData = sharedViewModel.getMutableLiveData();
+        mutableLiveData.observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                textView.setText(s);
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_right, container, false);
+        return view;
     }
 
     @Override
