@@ -52,15 +52,15 @@ public class LeftFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        button1 = view.findViewById(R.id.button1);
+//        button1 = view.findViewById(R.id.button1);
         button2 = view.findViewById(R.id.button2);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sharedViewModel.setValue("Message from button 1");
-            }
-        });
+//        button1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                sharedViewModel.setValue("Message from button 1");
+//            }
+//        });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override

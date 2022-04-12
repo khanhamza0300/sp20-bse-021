@@ -37,7 +37,7 @@ public class RightFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_right, container, false);
-        textView = view.findViewById(R.id.textView);
+//        textView = view.findViewById(R.id.textView);
 
         sharedViewModel = new ViewModelProvider(getActivity()).get(SharedViewModel.class);
         MutableLiveData<String> mutableLiveData = sharedViewModel.getMutableLiveData();
