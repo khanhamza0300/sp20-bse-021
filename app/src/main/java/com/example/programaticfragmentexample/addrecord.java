@@ -15,6 +15,11 @@ import android.view.ViewGroup;
  */
 public class addrecord extends Fragment {
 
+
+    public static addrecord newInstance() {
+        addrecord fragment = new addrecord();
+        return fragment;
+    }
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

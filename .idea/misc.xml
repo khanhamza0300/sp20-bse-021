@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ehtek/AndroidStudioProjects/SimpleFragmentCommUsingViewModel/app/src/main/res/layout-land/activity_main.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/ehtek/AndroidStudioProjects/SimpleFragmentCommUsingViewModel/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ehtek/AndroidStudioProjects/SimpleFragmentCommUsingViewModel/app/src/main/res/layout/fragment_addrecord.xml" value="0.4" />
-        <entry key="..\:/Users/ehtek/AndroidStudioProjects/SimpleFragmentCommUsingViewModel/app/src/main/res/layout/fragment_left.xml" value="0.264" />
+        <entry key="..\:/Users/ehtek/AndroidStudioProjects/SimpleFragmentCommUsingViewModel/app/src/main/res/layout/fragment_left.xml" value="0.2" />
         <entry key="..\:/Users/ehtek/AndroidStudioProjects/SimpleFragmentCommUsingViewModel/app/src/main/res/layout/fragment_right.xml" value="0.264" />
         <entry key="..\:/Users/ehtek/AndroidStudioProjects/SimpleFragmentCommUsingViewModel/app/src/main/res/layout/fragment_searchrecord.xml" value="0.4" />
         <entry key="..\:/Users/ibtis/AndroidStudioProjects/ProgramaticFragmentExample/app/src/main/res/layout-land/activity_main.xml" value="0.16510416666666666" />

@@ -32,11 +32,12 @@ public class LeftFragment extends Fragment {
         LeftFragment fragment = new LeftFragment();
         return fragment;
     }
-
+private Communication com;
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         //assign comm interface
+        com=(Communication) context;
     }
 
     @Override
@@ -52,21 +53,26 @@ public class LeftFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        button1 = view.findViewById(R.id.button1);
-        button2 = view.findViewById(R.id.button2);
+        button1 = view.findViewById(R.id.add);
+//        button2 = view.findViewById(R.id.button2);
 
-//        button1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                sharedViewModel.setValue("Message from button 1");
-//            }
-//        });
-
-        button2.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sharedViewModel.setValue("Message from button 2");
+            com.addRecord();
             }
+
         });
+
+//        button2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                sharedViewModel.setValue("Message from button 2");
+//            }
+//        });
+    }
+
+    interface Communication{
+        public void addRecord();
     }
 }

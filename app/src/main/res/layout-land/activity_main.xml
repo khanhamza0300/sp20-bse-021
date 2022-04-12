@@ -11,7 +11,7 @@
         android:id="@+id/frameLayout1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="25">
+        android:layout_weight="50">
 
     </FrameLayout>
 
@@ -19,7 +19,7 @@
         android:id="@+id/frameLayout2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="75">
+        android:layout_weight="50">
 
     </FrameLayout>
 </LinearLayout>
